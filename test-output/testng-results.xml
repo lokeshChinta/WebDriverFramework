@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="105294" started-at="2020-04-29T13:10:20 IST" finished-at="2020-04-29T13:12:05 IST">
+  <suite name="Default suite" duration-ms="150059" started-at="2020-04-29T13:38:47 IST" finished-at="2020-04-29T13:41:17 IST">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="105294" started-at="2020-04-29T13:10:20 IST" finished-at="2020-04-29T13:12:05 IST">
+    <test name="Default test" duration-ms="150059" started-at="2020-04-29T13:38:47 IST" finished-at="2020-04-29T13:41:17 IST">
       <class name="com.tests.FirstTest">
-        <test-method status="PASS" signature="configure()[pri:0, instance:com.tests.FirstTest@1efed156]" name="configure" is-config="true" duration-ms="3029" started-at="2020-04-29T13:10:20 IST" finished-at="2020-04-29T13:10:23 IST">
+        <test-method status="PASS" signature="configure()[pri:0, instance:com.tests.FirstTest@7494e528]" name="configure" is-config="true" duration-ms="2822" started-at="2020-04-29T13:38:47 IST" finished-at="2020-04-29T13:38:50 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configure -->
-        <test-method status="PASS" signature="test1()[pri:0, instance:com.tests.FirstTest@1efed156]" name="test1" duration-ms="101134" started-at="2020-04-29T13:10:23 IST" finished-at="2020-04-29T13:12:04 IST">
+        <test-method status="PASS" signature="test1()[pri:0, instance:com.tests.FirstTest@7494e528]" name="test1" duration-ms="146004" started-at="2020-04-29T13:38:50 IST" finished-at="2020-04-29T13:41:16 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test1 -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.FirstTest@1efed156]" name="tearDown" is-config="true" duration-ms="1107" started-at="2020-04-29T13:12:04 IST" finished-at="2020-04-29T13:12:05 IST">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.tests.FirstTest@7494e528]" name="tearDown" is-config="true" duration-ms="1159" started-at="2020-04-29T13:41:16 IST" finished-at="2020-04-29T13:41:17 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

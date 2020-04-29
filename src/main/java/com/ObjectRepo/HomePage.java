@@ -20,7 +20,10 @@ public class HomePage {
     @FindBy(linkText="Flights")
     private WebElement flightLinkTxt;
 	
-	
+	@FindBy(linkText="SIGN-OFF")
+	private WebElement signOffBtn;
+    
+    
 	public HomePage(WebDriver driver){
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
@@ -38,6 +41,8 @@ public class HomePage {
 		this.flightLinkTxt.click();
 	}
 	
-	
+	public void clickSignOffButton() {
+		this.signOffBtn.click();
+	}
 
 }

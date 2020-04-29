@@ -4,6 +4,7 @@ package com.tests;
 import org.testng.annotations.Test;
 
 import com.GenericLibrary.BaseClass;
+import com.GenericLibrary.ReUsableMethods;
 import com.ObjectRepo.FlightPage;
 import com.ObjectRepo.HomePage;
 import com.ObjectRepo.RegisterPage;
@@ -31,6 +32,11 @@ public class FirstTest extends BaseClass {
 		     homePageObj.clickFlightButton();
 		     
 		     flightPageObj.fillDetailsAndClickContinue();
+		     
+		     homePageObj.clickSignOffButton();
+		     
+		     ReUsableMethods.takeScreenshot(BaseClass.driver, "SignOffPage");
+		     
 		
 	}
 	

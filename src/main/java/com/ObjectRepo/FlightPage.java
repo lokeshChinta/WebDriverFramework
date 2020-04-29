@@ -48,11 +48,17 @@ public class FlightPage {
 	   String ExpectedVal="$1169 USD";
 	   
 	   ReUsableMethods.selectByIndexusingSelectClass(this.passengersSelectDropDown, 1);
+	   ReUsableMethods.takeScreenshot(driver, "FirstPage");
+	   
 	   businessClassRadioBtn.click();
+	   ReUsableMethods.takeScreenshot(driver, "SecondPage");
 	   continueBtn.click();
+	   ReUsableMethods.takeScreenshot(driver, "ThirdPage");
 	   ReUsableMethods.waitForPageToLoad(driver, 10);
+	   ReUsableMethods.takeScreenshot(driver, "FourthPage");
 	   this.reserveFlightsContinueBtn.click();
 	   ReUsableMethods.waitForPageToLoad(driver, 10);
+	   ReUsableMethods.takeScreenshot(driver, "FifthPage");
 	   this.buyFlightsContinueBtn.click();
 	   ReUsableMethods.waitForPageToLoad(driver, 10);
 	   
