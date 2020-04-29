@@ -15,12 +15,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 public class ReUsableMethods {
 	
 	public static WebDriverWait wait;
 	
 	private static  Select select;
+	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+	public static ExtentTest logger;
 	
+	public static String fileName;
 	 
 	 
 	
@@ -52,22 +60,32 @@ public class ReUsableMethods {
 		driver.manage().timeouts().implicitlyWait(seconds, TimeUnit.SECONDS);
 	}
 	
-	public static void takeScreenshot(WebDriver driver,String name) {
-		
+	public static String takeScreenshot(WebDriver driver,String name) {
+		String screenshotFileName=null;
 		try {
-			File newFile =new File(System.getProperty("user.dir")+"\\Screenshots\\"+name+".jpg");
+			  screenshotFileName= System.getProperty("user.dir")+"\\Screenshots\\"+name+".jpg";
+			File newFile =new File(screenshotFileName);
+			
 		File src=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 	   FileUtils.copyFile(src, newFile);
-		}
+	      }
 		catch(Exception exe)
 		{
 			System.out.println(exe.getMessage());
 		}
+		 return screenshotFileName;
+		
+	}
 		
 		
-		
+		public static ExtentReports  initializeReports(String fileName) {
+			htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"\\Reports\\"+fileName+".html");
+			extent=new ExtentReports();
+			extent.attachReporter(htmlReporter);
+			return extent;
+		}
 		
 		
 	}
 	
-}
+

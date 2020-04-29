@@ -27,7 +27,7 @@ public class Login {
 	
 	
 	
-	Login(WebDriver driver){
+	public Login(WebDriver driver){
 	 this.driver=driver;	
 	 PageFactory.initElements(this.driver, this);
 	}
